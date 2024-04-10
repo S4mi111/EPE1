@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Buscador</label>
+    <input type="text">
+    <button>Buscar</button>
+    <table>
+
+    <th><div id="result" style="width: 45%;"></div></th>
+    <th><div id="result2" style="width: 45%;"></div></th>
+    </table>
+
+</body>
+</html>
+
+
+
+
+
+<script>
+    const Frutas = [{"id":"1","nombre":"Frutilla"},
+    {"id":"2","nombre":"Manzana"},
+    {"id":"3","nombre":"Platano"},
+    {"id":"4","nombre":"Melon"},
+    {"id":"5","nombre":"Tuna"},
+    {"id":"6","nombre":"Sandia"},
+]
+const verduras = [{"id":"1","nombre":"papa"},
+    {"id":"2","nombre":"tomate"},
+    {"id":"3","nombre":"apio"},
+    {"id":"4","nombre":"choclo"},
+    {"id":"5","nombre":"arverja"},
+    {"id":"6","nombre":"repollo"},
+]
+
+</script>
+
+<script>
+
+resultados = document.getElementById("result")
+resultados2 = document.getElementById("result2")
+
+Frutas.forEach(function(Frutas){
+
+    const frutasResulado = document.createElement("div");
+    frutasResulado.innerHTML = "id " +Frutas.id + "<br>"+ "Nombre " + Frutas.nombre;
+    resultados.appendChild(frutasResulado);
+});
+verduras.forEach(function(verduras){
+
+const verdurasResulado = document.createElement("div");
+verdurasResulado.innerHTML = "id " +verduras.id + "<br>"+ "Nombre " + verduras.nombre;
+resultados2.appendChild(verdurasResulado);
+});
+</script>
